@@ -5,3 +5,48 @@ Verde: #49a09d
 Lilás: #5f2c82
 */
 
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #5f2c82;
+}
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+section#login{
+    height: 500px;
+    width: 250px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden; /*Tudo que ficar fora da borda vai ficar escondido*/
+
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.514); /*Sombreamento*/
+
+    transition: width .3s, height .3s; /*Animação de transição*/
+    transition-timing-function: ease; /*Essa função da uma suavizada na transição*/
+}
+section#login > div#imagem{
+    display: block;
+    background: #5f2c82 url(../imagens/imagem01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 200px;
+}
+section#login > div#formulario{
+    display: block;
+    padding: 10px;
+}
