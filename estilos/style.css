@@ -35,6 +35,7 @@ section#login{
     background-color: white;
     box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.514); /*Sombreamento*/
 
+    transform: translate(-50%, -50%); /*Dica: colocar o transform abaixo de todos os outros atributos*/
     transition: width .3s, height .3s; /*Animação de transição*/
     transition-timing-function: ease; /*Essa função da uma suavizada na transição*/
 }
@@ -59,11 +60,32 @@ div#formulario > p {
 }
 form > div.campo{
     display: block;
-    height: 40px;
+    height: 41px;
     width: 100%;
     margin: 5px 0px;
-    border-radius: 5px;
+    border: 2px solid #5f2c82;
+    border-radius: 8px;
     background-color: #5f2c82;
+}
+div.campo > i {
+    width: 40px;
+    padding: 5px;
+    color:white;
+    font-size: 2em;
+}
+div.campo input{
+    height: 100%;
+    width: calc(100% - 50px); /*Função usada por calculos para ajustar a caixa*/
+    transform: translateY(-14px); /*Coloca a caixa para cima negativamente*/
+    padding: 4%;
+    border: none;
+    border-radius: 8px;
+    background-color:  #5c9e9c;
+    font-size: 1em;
+    transform: translateY(-13px);
+}
+div.campo input:focus-within /*Serve para assim que clicar na caixa ela transitar a cor*/{
+    background-color: white;    
 }
 form > input[type=submit]{
     display: block;
